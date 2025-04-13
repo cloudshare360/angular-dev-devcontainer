@@ -3,9 +3,11 @@
   "hostRequirements": {
     "cpus": 4
   },
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-  "initializeCommand": "bash -c 'source /usr/local/share/nvm/nvm.sh && nvm install 8.12.0 && nvm use 8.12.0 && npm install -g @angular/cli@1.7.4'",
-  "postCreateCommand": "bash -c 'if [ -d \"my-angular5-app\" ]; then cd my-angular5-app && npm install; else ng new my-angular5-app --skip-git --skip-install && cd my-angular5-app && npm install; fi'",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/angular-dev-devcontainer,type=bind",
+  "workspaceFolder": "/workspaces/angular-dev-devcontainer",
+  "initializeCommand": "bash -c 'sudo apt-get update && sudo apt-get install -y curl'",
+  "onCreateCommand": "bash -c 'source /home/codespace/.nvm/nvm.sh && nvm install 8.12.0 && nvm use 8.12.0 && npm install -g @angular/cli@1.7.4'",
+  "updateContentCommand": "bash -c 'if [ -d \"my-angular5-app\" ]; then cd my-angular5-app && npm install; else ng new my-angular5-app --skip-git --skip-install && cd my-angular5-app && npm install; fi'",
   "postAttachCommand": "bash -c 'cd my-angular5-app && ng serve --host 0.0.0.0 --port 4200 --disable-host-check'",
   "customizations": {
     "codespaces": {
@@ -25,5 +27,6 @@
       "onAutoForward": "openPreview"
     }
   },
-  "forwardPorts": [4200]
+  "forwardPorts": [4200],
+  "remoteUser": "codespace"
 }
