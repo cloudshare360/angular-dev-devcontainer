@@ -3,12 +3,20 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "12"
+    },
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true
     }
   },
   "customizations": {
     "vscode": {
       "extensions": [
-        "angular.ng-template"
+        "angular.ng-template",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eg2.vscode-npm-script"
       ]
     }
   },
