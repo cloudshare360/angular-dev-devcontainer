@@ -6,11 +6,6 @@
     }
   },
   "customizations": {
-    "codespaces": {
-      "openFiles": [
-        "my-angular5-app/src/app/app.component.ts"
-      ]
-    },
     "vscode": {
       "extensions": [
         "angular.ng-template"
