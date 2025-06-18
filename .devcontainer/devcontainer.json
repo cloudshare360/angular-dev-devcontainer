@@ -3,11 +3,6 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "12"
-    },
-    "ghcr.io/devcontainers/features/common-utils:2": {
-      "installZsh": true,
-      "installOhMyZsh": true,
-      "upgradePackages": true
     }
   },
   "customizations": {
@@ -29,5 +24,7 @@
   "forwardPorts": [
     4200
   ],
-  "remoteUser": "codespace"
+  "remoteUser": "codespace",
+  "postCreateCommand": "npm install -g @angular/cli@9.1.9"
+
 }
