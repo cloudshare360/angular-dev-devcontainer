@@ -24,7 +24,6 @@
   "forwardPorts": [
     4200
   ],
-  "remoteUser": "codespace",
-  "postCreateCommand": "npm install -g @angular/cli@9.1.9"
+  "remoteUser": "codespace"
 
 }
