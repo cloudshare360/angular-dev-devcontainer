@@ -8,7 +8,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "angular.ng-template"
+        "angular.ng-template",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eg2.vscode-npm-script"
       ]
     }
   },
@@ -22,4 +25,5 @@
     4200
   ],
   "remoteUser": "codespace"
+
 }
